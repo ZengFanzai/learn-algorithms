@@ -1,0 +1,100 @@
+\documentclass[11pt,UTF8]{ctexart}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{amsmath}
+\usepackage{amssymb}%空集符号
+
+\begin{document}
+	\begin{algorithm}
+		\caption{MAX-HEAPIFY(A, $i$)}
+		MAX-HEAPIFY(A, $i$)
+		\begin{algorithmic}[1] %每行显示行号
+			\State $l$=LEFT($i$)
+			\State $r$=RIGHT($i$)
+			\If {$l \leq A.heap$-$size$ and $A[l]>A[i]$}
+			\State $largest=l$
+			\Else { $largest=i$}
+			\EndIf
+			\If{$r \leq A.heap$-$size$ and $A[r]>A[largest]$}
+			\State $largest=r$
+			\EndIf
+			\If{$largest \neq i$}
+			\State {exchange $A[i]$ with $A[largest]$}
+			\State {MAX-HEAPIFY(A, $largest$)}
+			\EndIf
+		\end{algorithmic}
+	\end{algorithm}
+
+	\begin{algorithm}
+		\caption{BUILD-MAX-HEAP(A)}
+		BUILD-MAX-HEAP(A)
+		\begin{algorithmic}[1]
+			\State {$A.heap$-$size=A.length$}
+			\For{$i=\left \lfloor A.length/2 \right \rfloor$ downto 1}
+			\State {MAX-HEAPIFY(A, $i$)}
+			\EndFor
+		\end{algorithmic}
+	\end{algorithm}
+
+	\begin{algorithm}
+		\caption{HEAPSORT(A)}
+		
+		HEAPSORT(A)
+		\begin{algorithmic}[1]
+			\State BUILD-MAX-HEAP(A)
+			\For{$i=A.length$ downto 2}
+			\State exchange A[$1$] with A[$i$]
+			\State $A.heap$-$size=A.heap$-$size-1$
+			\State MAX-HEAPIFY(A, $i$)
+			\EndFor
+		\end{algorithmic}
+	\end{algorithm}
+
+	\begin{algorithm}
+		\caption{HEAP-EXTRACT-MAX(A)}
+		时间复杂度为\textbf{O($\lg n$)}
+		
+		HEAP-EXTRACT-MAX(A)
+		\begin{algorithmic}[1]
+			\If{$A.heap$-$size < 1$}
+			\State error "heap underflow"
+			\EndIf
+			\State $max$ = A[1]
+			\State A[1] = A[A.$heap$-$size$]
+			\State $A.heap$-$size = A.heap$-$size-1$
+			\State MAX-HEAPIFY(A, 1)
+			\State \Return $max$
+		\end{algorithmic}
+	\end{algorithm}
+
+	\begin{algorithm}
+		\caption{HEAP-INCREASE-KEY($A,i,key$)}
+		时间复杂度为\textbf{O($\lg n$)}
+		
+		HEAP-INCREASE-KEY($A,i,key$)
+		\begin{algorithmic}[1]
+			\If{$key < A[i]$}
+			\State error "new key is smaller than current key"
+			\EndIf
+			\State $A[i] = key$
+			\While{$i >1 $and$ A[PARENT(i) <A[i]]$}
+			\State exchange $A[i]$ whih $A[PARENT(i)]$
+			\State $i = PARENT(i)$
+			\EndWhile
+		\end{algorithmic}
+	\end{algorithm}	
+
+	\begin{algorithm}
+	\caption{MAX-HEAP-INSERT($A,i,key$)}
+	时间复杂度为\textbf{O($\lg n$)}
+	
+	MAX-HEAP-INSERT($A,i,key$)
+		\begin{algorithmic}[1]
+			\State $A.heap$-$size = A.heap$-$size + 1$
+			\State $A[A.heap$-$size] = -\infty$
+			\State HEAP-INCREASE-KEY($A,i,key$)
+		\end{algorithmic}
+	\end{algorithm}	
+\end{document}
