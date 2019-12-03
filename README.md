@@ -1,3 +1,3 @@
 # learn-algorithms
 
-- [堆排序](../learn-algorithms/Heapsort/heapsort.md)
+- [堆排序](./Heapsort/heapsort.md)
