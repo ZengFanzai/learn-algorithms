@@ -87,14 +87,14 @@
 	\end{algorithm}	
 
 	\begin{algorithm}
-	\caption{MAX-HEAP-INSERT($A,i,key$)}
+	\caption{MAX-HEAP-INSERT($A, key$)}
 	时间复杂度为\textbf{O($\lg n$)}
 	
-	MAX-HEAP-INSERT($A,i,key$)
+	MAX-HEAP-INSERT($A,key$)
 		\begin{algorithmic}[1]
 			\State $A.heap$-$size = A.heap$-$size + 1$
 			\State $A[A.heap$-$size] = -\infty$
-			\State HEAP-INCREASE-KEY($A,i,key$)
+			\State HEAP-INCREASE-KEY($A,A.heap$-$size,key$)
 		\end{algorithmic}
 	\end{algorithm}	
 \end{document}
