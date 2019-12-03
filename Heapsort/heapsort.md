@@ -28,31 +28,31 @@
 
 ### MAX-HEAPIFY
 
-<img src="../Heapsort/maxheapify-1.png" alt="maxheapify伪代码">
+<img src="../Heapsort/img/maxheapify-1.png" alt="maxheapify伪代码">
 
-<img src="../Heapsort/maxheapify.png" alt="maxheapify" width="700px">
+<img src="../Heapsort/img/maxheapify.png" alt="maxheapify" width="700px">
 
 ### BUILD-MAX-HEAP
 
-<img src="../Heapsort/build-max-heap-1.png" alt="build-max-heap伪代码">
+<img src="../Heapsort/img/build-max-heap-1.png" alt="build-max-heap伪代码">
 
 给定一个无序数组 A
 
-<img src="../Heapsort/ArrayA.png" alt="数组A">
+<img src="../Heapsort/img/ArrayA.png" alt="数组A">
 
 构建最大堆,通过 MAX-HEAPIFY 维护最大堆性质：
 
-<img src="../Heapsort/build-max-heap.png" alt="构建最大堆" width="700px">
+<img src="../Heapsort/img/build-max-heap.png" alt="构建最大堆" width="700px">
 
 ### HEAP-SORT
 
-<img src="../Heapsort/heap-sort-1.png" alt="堆排序伪代码">
+<img src="../Heapsort/img/heap-sort-1.png" alt="堆排序伪代码">
 
-<img src="../Heapsort/heap-sort.png" alt="堆排序" width="900px">
+<img src="../Heapsort/img/heap-sort.png" alt="堆排序" width="900px">
 
 > 堆排序算法的演示
 
-<img src="../Heapsort/Sorting_heapsort_anim.gif" alt="Sorting_heapsort_anim">
+<img src="../Heapsort/img/Sorting_heapsort_anim.gif" alt="Sorting_heapsort_anim">
 
 ## 优先队列
 
@@ -68,14 +68,14 @@
 
 ### EXTRACT-MAX(S)
 
-<img src="../Heapsort/heap-extract-max.png" alt="heap-extract-max">
+<img src="../Heapsort/img/heap-extract-max.png" alt="heap-extract-max">
 
 ### INCREASE-KEY(S,x,k)
 
-<img src="../Heapsort/heap-increase-key.png" alt="heap-increase-key">
+<img src="../Heapsort/img/heap-increase-key.png" alt="heap-increase-key">
 
-<img src="../Heapsort/heap-increase-key-1.png" alt="heap-increase-key图示" width="700px">
+<img src="../Heapsort/img/heap-increase-key-1.png" alt="heap-increase-key图示" width="700px">
 
 ### MAX-HEAP-INSERT(A,key)
 
-<img src="../Heapsort/max-heap-insert.png" alt="max-heap-insert">
+<img src="../Heapsort/img/max-heap-insert.png" alt="max-heap-insert">
