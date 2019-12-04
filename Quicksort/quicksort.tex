@@ -1,0 +1,44 @@
+\documentclass[11pt,UTF8]{ctexart}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{amsmath}
+\usepackage{amssymb}%空集符号
+
+\begin{document}
+	\begin{algorithm}
+		\caption{QUICKSORT(A,$p,r$)}
+		QUICKSORT(A,$p,r$)
+		\begin{algorithmic}[1]
+			\If{$p<r$}A
+			\State $q$=PARTITION(A,$p,r$)
+			\State QUICKSORT(A, $p, q-1$)
+			\State QUICKSORT(A, $q+1, r$)
+			\EndIf
+		\end{algorithmic}
+	\end{algorithm}
+
+	\begin{algorithm}
+		\caption{PARTITION(A,$p,r$)}
+		PARTITION(A,$p,r$)
+		\begin{algorithmic}[1]
+			\State $x = A[r]$
+			\State $i = p-1$
+			\For{$j=p$ to $r-1$}
+				\If{$A[j] \leq x$}
+				\State $i=i+1$
+				\State exchange $A[i]$ with $A[j]$
+				\EndIf
+			\EndFor
+			\State exchange $A[i+1]$ with $A[r]$
+			\State \Return $i+1$
+		\end{algorithmic}
+	\end{algorithm}
+
+ 	\begin{flushleft}
+ 	1. 若$p \leq k \leq i$, 则$A[k] \leq x$\\
+ 	2. 若$i+1\leq k \leq j-1$, 则$A[k]>x$\\
+ 	3. 若$k=r$, 则$A[k]=x$
+ 	\end{flushleft}
+\end{document}
