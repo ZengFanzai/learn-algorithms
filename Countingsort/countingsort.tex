@@ -1,0 +1,33 @@
+\documentclass[11pt,UTF8]{ctexart}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{amsmath}
+\usepackage{amssymb}%空集符号
+
+\begin{document}
+	\begin{algorithm}
+		\caption{COUNTING-SORT(A,B,$k$)}
+		COUNTING-SORT(A,B,$k$)
+		\begin{algorithmic}[1]
+			\State let $C[0..k]$ be a new array
+			\For{$i=0 \to k$}
+			\State $C[i]=0$
+			\EndFor
+			\For{$j=1 \to A.length$}
+			\State $C[A[j]]=C[A[j]]+1$
+			\EndFor
+			\State //$C[i]$ now contains the number of elements equal to i.
+			\For{$i=1 \to k$}
+			\State $C[i]=C[i]+C[i-1]$
+			\EndFor
+			\State //$C[i]$ now contains the number of elements less than or equal to i
+			\For{$j=A.length \to 1$}
+			\State $B[C[A[j]]]=A[j]$
+			\State $C[A[j]]=C[A[j]]-1$
+			\EndFor
+		\end{algorithmic}
+	\end{algorithm}
+
+\end{document}
